@@ -130,7 +130,7 @@ writeType <- function(con, class) {
                  POSIXct = "t",
                  factor = "c",
                  `data.frame` = "l",
-                 stop("Unsupported type '", type, "' for serialization"))
+                 stop("Unsupported type '", class, "' for serialization"))
   writeBin(charToRaw(type), con)
 }
 

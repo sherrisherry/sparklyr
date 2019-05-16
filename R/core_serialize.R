@@ -73,7 +73,7 @@ writeObject <- function(con, object, writeType = TRUE) {
          POSIXct = writeTime(con, object),
          factor = writeFactor(con, object),
          `data.frame` = writeList(con, object),
-         stop("Unsupported type '", type, "' for serialization"))
+         stop("Unsupported type '", serdeType, "' for serialization"))
 }
 
 writeVoid <- function(con) {
